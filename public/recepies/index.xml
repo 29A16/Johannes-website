@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Recepies on JR</title>
+    <link>https://example.org/recepies/</link>
+    <description>Recent content in Recepies on JR</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <atom:link href="https://example.org/recepies/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Bread</title>
+      <link>https://example.org/recepies/bread/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/recepies/bread/</guid>
+      <description>&lt;h2 id=&#34;whole-grain---dk&#34;&gt;Whole grain - DK&lt;/h2&gt;&#xA;&lt;h3 id=&#34;day-1-soaking&#34;&gt;Day 1 (soaking)&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;225 g cracked ray grains&lt;/li&gt;&#xA;&lt;li&gt;225 g seeds&lt;/li&gt;&#xA;&lt;li&gt;300 g warm water&lt;/li&gt;&#xA;&lt;li&gt;75 g acidic sourdough &lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Leave soaking covered for 6 h or over night&lt;/p&gt;&#xA;&lt;h3 id=&#34;day-2&#34;&gt;Day 2&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;300 g whole grain rye flour&lt;/li&gt;&#xA;&lt;li&gt;300 g warm water&lt;/li&gt;&#xA;&lt;li&gt;180 g acidic sour dough &lt;/li&gt;&#xA;&lt;li&gt;15 g salt&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Optional malt/brown sirup (~30g)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Add everything together with the soaked seeds and add more rye flower/water until the consistency of minced meat is reached. &lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Deserts</title>
+      <link>https://example.org/recepies/deserts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/recepies/deserts/</guid>
+      <description>&lt;h2 id=&#34;milchreis-rice-porridge&#34;&gt;Milchreis (rice Porridge)&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;200 g short grain rice&lt;/li&gt;&#xA;&lt;li&gt;200 ml water&lt;/li&gt;&#xA;&lt;li&gt;500 ml milk&lt;/li&gt;&#xA;&lt;li&gt;vanilla sugar to taste&lt;/li&gt;&#xA;&lt;li&gt;cinnamon to taste&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;After washing the rice, add water and bring to a boil. Then lower to medium heat and add the milk and let simmer for 30 min or until the rice is tender. Add seasoning to taste.&lt;/p&gt;&#xA;&lt;h3 id=&#34;coconut-variant&#34;&gt;Coconut variant&lt;/h3&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;200 g rice&lt;/li&gt;&#xA;&lt;li&gt;300 ml water&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;Cook the rice, while preparing the &lt;em&gt;sauce&lt;/em&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>Main courses</title>
+      <link>https://example.org/recepies/main-course/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://example.org/recepies/main-course/</guid>
+      <description>&lt;h1 id=&#34;pizza-and-pasta&#34;&gt;Pizza and Pasta&lt;/h1&gt;&#xA;&lt;h2 id=&#34;penne-arrabiata&#34;&gt;Penne Arrabiata&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;300 g penne&lt;/li&gt;&#xA;&lt;li&gt;500 ml sieved tomato&amp;rsquo;s&lt;/li&gt;&#xA;&lt;li&gt;4 cloves of garlic&lt;/li&gt;&#xA;&lt;li&gt;4-5 tbsp olive oil&lt;/li&gt;&#xA;&lt;li&gt;1 tsp chili flakes&lt;/li&gt;&#xA;&lt;li&gt;2 tsp salt&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;opt&lt;/em&gt; fresh Basil&lt;/li&gt;&#xA;&lt;li&gt;&lt;em&gt;opt&lt;/em&gt; 2 tbsp tomato purée&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;hr&gt;&#xA;&lt;p&gt;While cooking the penne in salted water finely chop/crush the garlic and fry together with the chili flakes under medium heat until the garlic just starts to turn brown. To the garlic add ca. 50 ml of penne water and 500 ml of sieved tomatoes.&#xA;Combine sieved pasta with sauce.&#xA;Optionally add fresh Basil&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

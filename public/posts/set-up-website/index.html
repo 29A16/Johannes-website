@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en-us"><head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+   <meta name="description" content="source/or
+
+Use a Hugo theme and customize it
+Script below to add the images from .md to the static dir
+
+Windows (updated)
+import os
+import re
+import shutil
+
+# Paths
+posts_dir = r&#34;E:\Documents\scratch\themes\nostyleplease\content&#34;
+attachments_dir = r&#34;E:\Documents\Obsidian\Merged\Attachments&#34;
+static_images_dir = r&#34;E:\Documents\scratch\static\images&#34;  
+
+# Regex pattern to find image references in the format ![[some/path/image.png]]
+image_pattern = re.compile(r&#39;!\[\[([^]]*\.png)\]\]&#39;)
+
+# Step 1: Process each markdown file in the posts directory and subdirectories
+for root, _, files in os.walk(posts_dir):
+    for filename in files:
+        if filename.endswith(&#34;.md&#34;):
+            filepath = os.path.join(root, filename)
+            with open(filepath, &#34;r&#34;, encoding=&#34;utf-8&#34;) as file:
+                content = file.read()
+            # Step 2: Find all image links
+            images = image_pattern.findall(content)
+            # Step 3: Process each found image
+            for image_rel_path in images:
+                image_source = os.path.join(attachments_dir, image_rel_path)  # Full path in attachments
+                image_name = os.path.basename(image_source)  # Extract only filename
+                image_dest = os.path.join(static_images_dir, image_name)
+  
+                # Step 4: Copy the image if it exists
+                if os.path.exists(image_source):
+                    shutil.copy(image_source, image_dest)
+                    print(f&#34;Copied: {image_source} -&gt; {image_dest}&#34;) 
+
+                    # Step 5: Replace the old link in Markdown with the new format
+                    markdown_image = f&#34;![Image Description](/images/{image_name.replace(&#39; &#39;, &#39;%20&#39;)})&#34;
+                    content = content.replace(f&#34;[[{image_rel_path}]]&#34;, markdown_image)
+                else:
+                    print(f&#34;Warning: {image_source} not found&#34;)
+
+            # Step 6: Write the updated content back to the markdown file
+            with open(filepath, &#34;w&#34;, encoding=&#34;utf-8&#34;) as file:
+                file.write(content) 
+
+print(&#34;Markdown files processed and images copied successfully.&#34;)
+Linux">  
+
+  <title>
+    
+      Setting up this site
+    
+  </title>
+
+
+  <link rel="shortcut icon" type="image/x-icon" href="/" />
+  
+  
+  
+  <link rel="stylesheet" href="/css/main.51652302d3a998bf7887aed5c2cf89141bbebdf45a2c8f87b0717a3cf4f51c4e53c694c328fb1de78c3a625a1c01f80745bf1f2f42c040647a245cbbb6c2d1d7.css" integrity="sha512-UWUjAtOpmL94h67Vws&#43;JFBu&#43;vfRaLI&#43;HsHF6PPT1HE5TxpTDKPsd54w6YlocAfgHRb8fL0LAQGR6JFy7tsLR1w==" />
+   <script>
+  MathJax = {
+    tex: {
+      inlineMath: [['$', '$'], ['\\(', '\\)']],
+      displayMath: [['$$','$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre']
+    }
+  };
+
+  window.addEventListener('load', (event) => {
+      document.querySelectorAll("mjx-container").forEach(function(x){
+        x.parentElement.classList += 'has-jax'})
+    });
+
+</script>
+<script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+ 
+</head>
+<body a="auto">
+        <main class="page-content" aria-label="Content">
+            <div class="w">
+                <div class="post-meta">
+                    <a href="/">..</a>
+
+                    <p>
+                        <time datetime="2025-03-04 00:00:00 &#43;0000 UTC">
+                            2025-03-04
+                        </time>
+                    </p>
+                </div>
+
+<article>
+    <h1>Setting up this site</h1>
+
+    
+
+    <p><a href="https://www.youtube.com/watch?v=dnE7c0ELEH8">source</a>/<a href="https://blog.networkchuck.com/posts/my-insane-blog-pipeline/">or</a></p>
+<ul>
+<li>Use a Hugo theme and customize it</li>
+<li>Script below to add the images from .md to the static dir</li>
+</ul>
+<p>Windows (updated)</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import os
+import re
+import shutil
+
+# Paths
+posts_dir = r&#34;E:\Documents\scratch\themes\nostyleplease\content&#34;
+attachments_dir = r&#34;E:\Documents\Obsidian\Merged\Attachments&#34;
+static_images_dir = r&#34;E:\Documents\scratch\static\images&#34;  
+
+# Regex pattern to find image references in the format ![[some/path/image.png]]
+image_pattern = re.compile(r&#39;!\[\[([^]]*\.png)\]\]&#39;)
+
+# Step 1: Process each markdown file in the posts directory and subdirectories
+for root, _, files in os.walk(posts_dir):
+    for filename in files:
+        if filename.endswith(&#34;.md&#34;):
+            filepath = os.path.join(root, filename)
+            with open(filepath, &#34;r&#34;, encoding=&#34;utf-8&#34;) as file:
+                content = file.read()
+            # Step 2: Find all image links
+            images = image_pattern.findall(content)
+            # Step 3: Process each found image
+            for image_rel_path in images:
+                image_source = os.path.join(attachments_dir, image_rel_path)  # Full path in attachments
+                image_name = os.path.basename(image_source)  # Extract only filename
+                image_dest = os.path.join(static_images_dir, image_name)
+  
+                # Step 4: Copy the image if it exists
+                if os.path.exists(image_source):
+                    shutil.copy(image_source, image_dest)
+                    print(f&#34;Copied: {image_source} -&gt; {image_dest}&#34;) 
+
+                    # Step 5: Replace the old link in Markdown with the new format
+                    markdown_image = f&#34;![Image Description](/images/{image_name.replace(&#39; &#39;, &#39;%20&#39;)})&#34;
+                    content = content.replace(f&#34;[[{image_rel_path}]]&#34;, markdown_image)
+                else:
+                    print(f&#34;Warning: {image_source} not found&#34;)
+
+            # Step 6: Write the updated content back to the markdown file
+            with open(filepath, &#34;w&#34;, encoding=&#34;utf-8&#34;) as file:
+                file.write(content) 
+
+print(&#34;Markdown files processed and images copied successfully.&#34;)
+</code></pre><p>Linux</p>
+<pre tabindex="0"><code class="language-Copy" data-lang="Copy">import os
+import re
+import shutil
+
+# Paths
+posts_dir = &#34;/Users/networkchuck/Documents/chuckblog/content/posts/&#34;
+attachments_dir = &#34;/Users/networkchuck/Documents/neotokos/Attachments/&#34;
+static_images_dir = &#34;/Users/networkchuck/Documents/chuckblog/static/images/&#34;
+
+# Step 1: Process each markdown file in the posts directory
+for filename in os.listdir(posts_dir):
+    if filename.endswith(&#34;.md&#34;):
+        filepath = os.path.join(posts_dir, filename)
+        
+        with open(filepath, &#34;r&#34;) as file:
+            content = file.read()
+        
+        # Step 2: Find all image links in the format ![Image Description](/images/Pasted%20image%20...%20.png)
+        images = re.findall(r&#39;\[\[([^]]*\.png)\]\]&#39;, content)
+        
+        # Step 3: Replace image links and ensure URLs are correctly formatted
+        for image in images:
+            # Prepare the Markdown-compatible link with %20 replacing spaces
+            markdown_image = f&#34;![Image Description](/images/{image.replace(&#39; &#39;, &#39;%20&#39;)})&#34;
+            content = content.replace(f&#34;[[{image}]]&#34;, markdown_image)
+            
+            # Step 4: Copy the image to the Hugo static/images directory if it exists
+            image_source = os.path.join(attachments_dir, image)
+            if os.path.exists(image_source):
+                shutil.copy(image_source, static_images_dir)
+
+        # Step 5: Write the updated content back to the markdown file
+        with open(filepath, &#34;w&#34;) as file:
+            file.write(content)
+
+print(&#34;Markdown files processed and images copied successfully.&#34;)
+</code></pre>
+</article>
+
+            </div>
+        </main>
+    </body></html>
